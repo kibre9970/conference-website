@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Net Conference Registration Page</title>
+	<link rel=stylesheet type="text/css" href="style.css">
+
+<SCRIPT language=JavaScript>
+function use()
+{
+   document.forms[0].empid.focus();
+}
+function validate()
+{
+	
+	if (isempid() && iskeyvalue() && isName())
+	{
+	      document.forms[0].submit();
+	}
+	return true;
+}
+
+function isempid()
+{
+     if( document.forms[0].empid.value=="")
+    {     
+           alert("You Must enter your Employee ID.Given by Administration");
+           document.forms[0].empid.focus();
+           return false;
+     } 
+     return true; 
+}
+
+function iskeyvalue()
+{
+     if( document.forms[0].key.value=="")
+    {
+           alert("You Must enter your verification key that has given for registration");
+           document.forms[0].key.focus();
+           return false;
+     } 
+     return true; 
+}
+function isName() 
+{
+    var str = document.forms[0].login.value;
+    if (str == "")
+   {
+     alert("\nThe Login Name field is blank .\n\nPlease re-enter your Login Name.")
+     document.forms[0].login.focus();
+      return false;
+    }
+     if((str.substring(0,1)<"a" || str.substring(0,1)>"z") && (str.substring(0,1)<"A" ||      str.substring(0,1)>"Z"))
+    {
+            alert("The Login Name should begin with an alphabetic character.");
+            return false;
+     }
+     for (var i = 1; i < str.length; i++) 
+    { 
+        var ch = str.substring(i, i + 1);
+        if ( ((ch < "a" || "z" < ch) && (ch < "A" || "Z" < ch)) && (ch < "0" || "9" < ch) && (ch != '_')) 
+     {
+      alert("\nThe Login Name field  accepts letters,numbers & underscore.\n\nPlease re-enter your Login     Name.");
+  document.forms[0].login.select();
+document.forms[0].login.focus();
+return false;
+}
+}
+return true;
+}
+</SCRIPT>
+</head>
+
+<body onload="use()" background="img/background.jpg" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0">
+
+<center><table width="765" height="100%" cellpadding="0" cellspacing="0" border="0" background="img/mainbackground.jpg"><tr valign="top"><td>
+
+<table width="764" height="97" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+<td width="248"><!-- logo image --><img src="source/logoback.jpg" width="400" height="97" border="0" alt=""><!-- end logo image --></td>
+<td width="100%" background="img/toplogobg.jpg"><img src="img/toplogobg.jpg" width="22" height="97" border="0" alt=""></td>
+	</tr>
+</table>
+<table width="764" height="42" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+<td width="169"><img src="img/left1.jpg" width="169" height="42" border="0" alt=""></td>
+<td width="100%" background="img/left1bg.jpg"><img src="img/left1bg.jpg" width="20" height="42" border="0" alt=""></td>
+	</tr>
+</table>
+
+<table width="764" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+
+<td width="150">
+<!-- menu below, copy and paste the menudivider.jpg code as necessary -->
+<!-- the &nbsp; is code for a one letter space -->
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="index.html">Home</a><BR>
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="Admin.html">Administrator</a><BR>
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="Client.html">Client Services</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="suggestions.html">Suggestions</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="sitemap.html">Site Map</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="help.html>Help</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+<!-- end menu -->
+</td>
+<td width="10">&nbsp;</td>
+<td width="744">
+
+
+
+
+
+
+
+<FORM  action="register.jsp" method = post>
+
+<table border = 3 width = 550 align = middle><tr><td bgcolor = khaki>
+<FONT  face="verdana" size=5 COLOR=red><center><marquee width="397" height="19" 
+align="middle" scrolldelay="20" scrollamount="2"><b>Registration Form</b></marquee>
+</CENTER></font>
+</tr></td></table>
+
+
+
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=550 height="260">
+        <TBODY >
+        <TR> <TD width="144" height="1"><font color="#000000">&nbsp;</font> </TD></TR>
+        
+<TR align = middle>
+          <TD align=right  valign = 'bottom' width='246' height="50">
+          <FONT  face="verdana" size=4 color=blue>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Enter Your Employee ID: </FONT></TD>
+          <TD Align=left valign = 'top'><font color="#000000">
+           <INPUT type = text maxLength=10 name=empid> 
+            <B><FONT color=red face="ARIAL, HELVETICA" size=+1>*</FONT></B>              <BR></font></TD></TR>
+
+        <TR align = middle>
+          <TD align=right vAlign=center width=246 height="50">
+          <FONT  face="verdana" size=4 color=blue>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Enter Verification Key: </FONT></TD>
+          <TD Align=left ><font color="#000000">
+           <INPUT maxLength=10 name=key> 
+            <B><FONT color=red face="ARIAL, HELVETICA" size=+1>*</FONT></B>              <BR></font></TD></TR>
+
+
+        <TR align = middle>
+          <TD align=right vAlign=center width=246 height="50">
+          <FONT  face="verdana" size=4 color=blue>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Choose Your Login Name: </FONT></TD>
+          <TD Align=left ><font color="#000000">
+           <INPUT maxLength=25 name=login> 
+            <B><FONT color=red face="ARIAL, HELVETICA" size=+1>*</FONT></B>              <BR></font></TD></TR>
+
+          <TR>
+          <TD align=middle vAlign=center width=196 height="50"><FONT 
+            face="verdana" size=4 color="#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp; </FONT></TD>
+          <TD  align = left width=332 height="50"><font color="#000000">
+          <FONT face="ARIAL, HELVETICA" size=-1>
+          <INPUT name=button onclick="validate()" type=button value=Submit>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <INPUT name=Reset type=reset value=Reset> </FONT><STRONG><FONT 
+            color=red face="ARIAL, HELVETICA" size=+2>&nbsp;</FONT></STRONG> 
+          <BR></font></TD></TR></TBODY></TABLE></TD></TR>
+ 
+    </TD></TR></TBODY></TABLE>>
+</FORM>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td>
+<td width="10">&nbsp;</td>
+	</tr>
+</table>
+</td></tr></table></center>
+
+</body>
+</html>
+

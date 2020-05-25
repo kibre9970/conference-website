@@ -1,0 +1,5 @@
+insert into password values('admin','admin','n');
+insert into empdetails values(1001,'admin','y','12/05/2005','admin');
+insert into security values('admin','who am I','admin');
+insert into userdetails values('admin','Administrator','Room No:227, Hostel-A, University of Hyderabad’,’500046’,’9885250577','kvbreddymca@yahoo.com',
+      'm','mca','india','Hyd','Ap','23/08/1980');

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Suggestions</title>
+	<link rel=stylesheet type="text/css" href="style.css">
+<script language="javascript">
+	function use()
+	{
+		frm.T1.focus();
+      }
+	function check()
+	{
+		a=frm.T1.value.length;
+		b=frm.T2.value.length;
+		c=frm.T3.value.length;
+		d=frm.S1.value.length;
+		e=frm.id.value.length;
+		if((a<=0)||(c<=0)||(e<=0))
+		{
+		alert('Name, Emp Id and Suggestion fields are mandatory');
+		return false;
+		}
+		else
+		{
+		return true;
+		}
+	}
+</script>
+
+</head>
+
+<body onload="use()" background="img/background.jpg" bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0">
+
+<center><table width="765" height="100%" cellpadding="0" cellspacing="0" border="0" background="img/mainbackground.jpg"><tr valign="top"><td>
+
+<table width="764" height="97" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+<td width="248"><!-- logo image --><img src="source/logoback.jpg" width="400" height="97" border="0" alt=""><!-- end logo image --></td>
+<td width="100%" background="img/toplogobg.jpg"><img src="img/toplogobg.jpg" width="22" height="97" border="0" alt=""></td>
+	</tr>
+</table>
+<table width="764" height="42" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+<td width="169"><img src="img/left1.jpg" width="169" height="42" border="0" alt=""></td>
+<td width="100%" background="img/left1bg.jpg"><img src="img/left1bg.jpg" width="20" height="42" border="0" alt=""></td>
+	</tr>
+</table>
+
+<table width="764" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+
+<td width="150">
+<!-- menu below, copy and paste the menudivider.jpg code as necessary -->
+<!-- the &nbsp; is code for a one letter space -->
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="index.html">Home</a><BR>
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="Admin.html">Administrator</a><BR>
+<img src="img/menudivider.jpg" width="150" height="8" border="0" alt=""><BR>
+&nbsp; <a href="Client.html">Client Services</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="suggestions.html">Suggestions</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="sitemap.html">Site Map</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+&nbsp; <a href="help.html>Help</a><BR>
+<img src="img/menudivider.jpg" width="150" height="6" border="0" alt=""><BR>
+<!-- end menu -->
+</td>
+<td width="10">&nbsp;</td>
+
+<td width="744">
+
+<br>
+
+<form method="POST" name=frm action="saveadvice.jsp" onSubmit="return check()">
+
+
+
+<table border = 3 width = 500 align = center><tr><td bgcolor = #9ACD32>
+<FONT  face="verdana" size=5 COLOR=red><center>Suggestions</CENTER></font>
+</tr></td></table>
+
+<p><font color="#008000" size=4 face="Comic sans MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;
+</font><input type="text" name="T1" size="50"><font color = red><sup>*</sup></font></p>
+
+<p><font color="#008000" face="Comic Sans MS" size=4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number
+&nbsp;:&nbsp;&nbsp;&nbsp;</font><input type="text" name="T2" size="14"></p>
+
+<p><font color="#008000" face="Comic Sans MS" size=4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee Id&nbsp;&nbsp;&nbsp;&nbsp;
+  :&nbsp;&nbsp;&nbsp;</font><input type="text" name="id" size="6"><font color = red><sup>*</sup></font></p>
+
+<p><font color="#008000" face="Comic Sans MS" size=4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  :&nbsp;&nbsp;&nbsp;<input type="text" name="T3" size="40"></font></p>
+
+<p><font color="#008000" face="Comic Sans MS" size=4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+ <font color="#008000" face="Comic Sans MS" size=4> Type In Your Suggestions.......</font><font color = red><sup>*</sup></font></p>
+  
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" name="message" cols="40"></textarea></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color = red><sup>*</sup></font> <font color = blue size =4>- Fields are Mandatory<font><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value=" Send " name="B1">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td>
+<td width="10">&nbsp;</td>
+	</tr>
+</table>
+</td></tr></table></center>
+
+</body>
+</html>
